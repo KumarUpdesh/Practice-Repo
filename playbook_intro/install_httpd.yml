@@ -1,0 +1,17 @@
+---
+- name: Installing webserver
+  hosts: all
+  become: true
+
+  vars:
+    - username: sammy
+    - home: /home/sammy   
+  
+  tasks:
+    - name: Install latest version of Apache
+      apt: name=apache2 update_cache=yes state=latest
+
+    - name: Start service of httpd server
+      service:
+        name: httpd
+        state: started

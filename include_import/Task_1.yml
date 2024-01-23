@@ -1,0 +1,3 @@
+- name: Play 1 inside the file
+  debug:
+    msg: Play 1 - Task 2

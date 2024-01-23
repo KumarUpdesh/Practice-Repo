@@ -1,0 +1,29 @@
+---
+  - name: This is overview of ansible data collection
+    hosts: all
+    
+    
+    
+    vars:
+      xyz: Hello, this is xyz
+      packages: ['wget', 'unzip', 'curl', 'vim']
+      cities:
+        - new_york
+        - london
+        - tokyo
+        - dubai
+          
+          
+          
+    tasks:
+      - name: this is data collection retrievel
+        debug:
+          var: xyz
+
+      - name: Getting sequence data collection F1
+        debug:
+          var: packages
+      
+      - name: Getting sequence data collection list
+        debug:
+          var: cities

@@ -1,0 +1,11 @@
+#!/home/updesh/ansible_updesh/myansible/bin/ansible-playbook
+- name: This will show the use of main include
+  hosts: localhost
+  gather_facts: false
+  
+  tasks:
+  - name: This task inside the main file
+    debug:
+      msg: "Main playbook which include the play1"
+  
+- include: play1.yml

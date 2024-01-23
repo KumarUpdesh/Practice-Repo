@@ -1,0 +1,23 @@
+---
+- name: This is overview of anisble variables
+  hosts: all
+
+  vars:
+    test: hello, this is test variable
+    my_name: Updesh Kumar
+    My_age: 31
+    my_height: 5.11
+    is_male: true
+  
+  tasks:
+    - name: Reading ansible playbooks variables
+      debug:
+        var: test
+
+    - name: Reading ansible playbooks debug module
+      debug:
+        msg:
+         - my name is {{ my_name }}
+         - I am {{ My_age }} years old
+         - my height is {{ my_height }}
+         - gender is male - {{ is_male }}

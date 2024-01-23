@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: 'yes'
+  become_user: root
+
+  tasks:
+   - name: add several userssss
+     user:
+       name: "{{ item.name }}"
+       state: absent
+       group: "{{ item.group}}"
+     with_items:
+        - {name: 'testuser1', group: 'games'}
+        - {name: 'testuser2', group: 'video'}

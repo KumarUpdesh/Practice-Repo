@@ -1,0 +1,12 @@
+#!/home/updesh/ansible_updesh/myansible/bin
+- name: This will show the use of Include Tasks
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: This task inside the main file
+    debug:
+      msg: "Main play 1 - Task 1"
+  - include_tasks: Task_1.yml
+  - include_tasks: Task_2.yml
+
+

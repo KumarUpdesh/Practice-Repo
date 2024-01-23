@@ -1,0 +1,8 @@
+- name: Introduction Ansible Playbooks
+  hosts: all
+  gather_facts: false
+  become: yes
+
+  tasks:
+    - name: 'Checking connection via ping'
+      ping

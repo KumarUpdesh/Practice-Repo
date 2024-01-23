@@ -1,0 +1,7 @@
+#!/home/updesh/ansible_updesh/myansible/bin/ansible-playbook
+# By above shiBang line you can run ansible playbook without the command ansible-playbook
+- hosts: all
+  tasks:
+    - name: Print message
+      debug:
+        msg: Hello Ansible World

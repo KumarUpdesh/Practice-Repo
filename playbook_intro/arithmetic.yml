@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  
+  vars:
+    a: 10
+    b: 24
+
+  tasks:
+    - name: operations on arithmetic
+      debug:
+        msg:
+        - "value of a is : {{ a }}"
+        - "value of b is : {{ b }}"
+        - "sum of a and b is : {{ a+b }}"
+        - "multiplication of a and b is : {{ a*b }}"
+        - "division of a and b is : {{ a/b }}"
+        - "subtraction of a and b is : {{ b-a }}"

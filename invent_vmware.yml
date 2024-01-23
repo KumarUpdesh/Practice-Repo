@@ -1,0 +1,10 @@
+plugin: community.vmware.vmware_host_inventory
+strict: True
+hostname: kubernets-virtual-machine
+username: kubernets
+password: "pass"
+validate_certs: False
+properties:
+  - name
+  - summary.runtime.powerState
+  - config.lockdownMode

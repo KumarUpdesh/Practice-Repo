@@ -1,0 +1,9 @@
+#!/home/updesh/ansible_updesh/myansible/bin/ansible-playbook
+- name: This will show the use of include
+  hosts: localhost
+  gather_facts: false
+  
+  tasks:
+  - name: This task inside the play1 file
+    debug:
+      msg: "Msg form play1.yaml file"

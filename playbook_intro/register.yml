@@ -1,0 +1,11 @@
+---
+- name: This is overview of the register
+  hosts: all
+
+  tasks:
+    - name: Retrive installed shell version
+      shell: "bash --version"
+      register: bash_ver
+
+    - debug:
+        var: bash_ver.stdout_lines[0].split()[3]

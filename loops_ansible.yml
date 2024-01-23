@@ -1,0 +1,16 @@
+---
+  - name: loops with items
+    hosts: localhost
+
+
+    tasks:
+    - name: add several users in one go
+      users:
+        - name: "{{ items }}"
+          state: present
+          group: "users"
+      with_items:
+        - testuser1
+        - testuser2
+        - testuser3
+        - testuser4
